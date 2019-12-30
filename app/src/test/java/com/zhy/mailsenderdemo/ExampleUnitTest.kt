@@ -1,4 +1,4 @@
-package com.zhy.mailsender
+package com.zhy.mailsenderdemo
 
 import org.junit.Test
 

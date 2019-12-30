@@ -1,19 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="match_parent">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="发件服务器"/>
+
+        <EditText
+                android:id="@+id/etServerHost"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入发件服务器地址"
+                android:text="smtp.qq.com"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="发件服务器端口"/>
+
+        <EditText
+                android:id="@+id/etServerHostPort"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入接收邮箱"
+                android:text="587"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="发件邮箱"/>
+
+        <EditText
+                android:id="@+id/etFromAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入发件邮箱"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="发件邮箱授权码（密码）"/>
+
+        <EditText
+                android:id="@+id/etFromPwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入接收邮箱"
+                android:textSize="14sp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="收件邮箱"/>
+
+        <EditText
+                android:id="@+id/etToAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入接收邮箱"
+                android:textSize="14sp"/>
+
+        <Button
+                android:id="@+id/btnSendMail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="点击发送邮件"/>
+
+        <Button
+                android:id="@+id/btnSendMailWithFile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="发送带附件邮件"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
